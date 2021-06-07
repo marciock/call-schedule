@@ -1,19 +1,19 @@
 import React from 'react';
-
+import VMasker from 'vanilla-masker';
 
 const FormUserAdd=()=>{
 
     return (
-        <div className="container">
+        <div className="container border shadow p-3 mb-5 bg-body rounded">
             <form>
 
                 <div className="row mt-5 ">
-                    <h3 className="text-center mb-3">Cadastro de Usuários </h3>
+                    <h3 className="text-center mb-3"><strong>Cadastro de Usuários</strong> </h3>
                 </div>
                 <div className="row justify-content-center mt5">
                     <div className="form-group col-8 mb-3">
                         <label htmlFor="name" className="form-label"><strong>Nome</strong></label>
-                        <input type="text" className="form-control" name="name" id="name" />
+                        <input type="text" className="form-control" name="name" id="name"/>
                     </div>
                     <div className="form-group col-8 mb-3">
                         <label htmlFor="email" className="form-label"><strong>Email</strong></label>
@@ -21,7 +21,7 @@ const FormUserAdd=()=>{
                     </div>
                     <div className="form-group col-8 mb-3">
                         <label htmlFor="contact" className="form-label"><strong>Telefone</strong></label>
-                        <input type="text" className="form-control" name="contact" id="contact" />
+                        <input type="text" className="form-control" name="contact" id="contact" onKeyDown={()=>VMasker(document.getElementById('contact')).maskPattern('(99) 9999-9999')}/>
                     </div>
                     <div className="form-group col-8 mb-3">
                         <label htmlFor="password" className="form-label"><strong>Senha</strong></label>
