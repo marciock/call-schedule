@@ -1,0 +1,13 @@
+.mg-l{
+    margin-left: 2rem;
+}
+.bt-person{
+    color:blue;
+    font-size: large;
+    border:unset;
+    background: unset;
+}
+.bt-person:hover{
+    color:cornflowerblue;
+   
+}
